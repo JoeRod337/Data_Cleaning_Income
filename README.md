@@ -25,7 +25,12 @@ Clean Data:
   - Show an understanding of looking for and correcting errors in the dataset.
 
 
+### ***Table of Contents***
+  - [***Importing Data***](#importing-data)
 
+  - [***Cleaning Data***](#Cleaning-Data)
+    
+  - [***Exploratory Data Analysis***](#exploratory-data-analysis)
 
 
 ## ***Importing Data***
@@ -103,3 +108,49 @@ To find the column location I need to query out the ‘row_id’ and ‘id’ us
 
 
 ## ***Exploratory Data Analysis***
+
+
+  To start exploring this data I wanted to see if some basic queries make sense when going through the data. I searched for the sum of ‘Aland’ by State to see if land sizes looked to make sense. Texas has the largest and D.C. has the smallest. 
+
+![alt text](Exploratory_Analysis1.1.png)
+
+
+  Say I wanted to know the top 10 states that have land and the top 10 that have water. The images below show how to do that by adding a ‘limit X’ to the query respectively.
+
+![alt text](Exploratory_Analysis1.2.png)
+
+![alt text](Exploratory_Analysis1.3.png)
+
+
+  So far, we have only worked with the ‘US_Household_income’ data. We have not worked with the ‘US_Household_Income_Statistics’ data. To do so we must join the tables.  See image below to see how I joined the two together. We used the ‘id’ column as our reference point to execute the inner join.
+
+![alt text](Exploratory_Analysis1.4.png)
+
+
+  However, it appears that not all the data came into the quarry so to correct these issues I changed the inner join to a right join. This will pull all data from ‘US_Household_Satistics’. This will pull the rest of the data from ‘US_Household_Income’ and create null cells where there may be missing or nonexistent data from the joining table.
+
+![alt text](Exploratory_Analysis1.5.png)
+
+
+  After the right join finished, I found that there are many areas of data that are missing. Using exploratory analysis, we have found a rather large hole in the data. This would be where I would reach out to the project manager or stakeholders to ensure that I correct the data before moving on or if I needed to remove the blank areas from any other analysis.
+
+![alt text](Exploratory_Analysis1.6.png)
+
+![alt text](Exploratory_Analysis1.7.png)
+
+  The image above shows data that can be used for querying. I would also export this data for a report that can be created in any software of the user’s favor.
+
+
+  The next several images shows how I would query out average income and list them in different orders.  This shows the different ways I can query and order data using MySQL.
+
+![alt text](Exploratory_Analysis1.8.png)
+
+![alt text](Exploratory_Analysis1.9.png)
+
+![alt text](Exploratory_Analysis1.10.png)
+
+![alt text](Exploratory_Analysis1.11.png)
+
+![alt text](Exploratory_Analysis1.12.png)
+
+![alt text](Exploratory_Analysis1.13.png)
